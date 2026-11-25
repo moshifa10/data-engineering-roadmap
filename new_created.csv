@@ -1,0 +1,13 @@
+order_id,customer,product,quantity,unit_price,order_date,payment_status,total
+1001,Lebo,Keyboard,1,750,2026-11-01,Paid,750
+1002,Amahle,Mouse,2,250,2026-11-01,Paid,500
+1003,Lebo,Monitor,1,3200,2026-11-02,Paid,3200
+1004,Sipho,Mouse,3,250,2026-11-03,Pending,750
+1005,Amahle,Keyboard,1,750,2026-11-03,Paid,750
+1006,Thando,Monitor,2,3200,2026-11-04,Paid,6400
+1007,Sipho,Keyboard,2,750,2026-11-05,Paid,1500
+1008,Lebo,Mouse,1,250,2026-11-05,Paid,250
+1010,Amahle,Monitor,1,3200,2026-11-07,Paid,3200
+1011,Sipho,Mouse,2,250,2026-11-08,Paid,500
+1012,Lebo,Monitor,1,3200,2026-11-09,Paid,3200
+1012,Lebo,Monitor,1,3200,2026-11-09,Paid,3200
