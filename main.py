@@ -51,7 +51,31 @@ df.to_csv("new_created.csv", index=False)
 
 def total_revenue(df: pd.DataFrame) -> int:
     return df["total"].sum()
+def total_orders(df: pd.DataFrame) -> int:
+    return df["total"].count()
 
-print(total_revenue(df))
 
+total = total_revenue(df)
+l = total_orders(df)
+
+print(round(total/l, 2))
+
+
+def top_generator(df: pd.DataFrame) -> str:
+    return df.groupby("product")["total"].sum().idxmax()
+
+def top_customer(df: pd.DataFrame) -> str:
+    return df.groupby("customer")["total"].sum().idxmax()
+
+print(top_generator(df))
+print(top_customer(df))
+
+# Orders
+
+paid = df[df["payment_status"] == "Paid"]
+pending = df[df["payment_status"] == "Pending"]
+
+
+print(len(paid))
+print(len(pending))
 
