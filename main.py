@@ -67,14 +67,23 @@ def top_generator(df: pd.DataFrame) -> str:
 def top_customer(df: pd.DataFrame) -> str:
     return df.groupby("customer")["total"].sum().idxmax()
 
+def top_product_quantity(df: pd.DataFrame) -> str:
+    return df.groupby("product")["quantity"].sum().idxmax()
+
 print(top_generator(df))
 print(top_customer(df))
+print(top_product_quantity(df))
 
 # Orders
 
 paid = df[df["payment_status"] == "Paid"]
 pending = df[df["payment_status"] == "Pending"]
 
+series_ = df["payment_status"] == "Paid"
+
+print("\n\n\n")
+print(series_)
+# print(pending)
 
 print(len(paid))
 print(len(pending))
